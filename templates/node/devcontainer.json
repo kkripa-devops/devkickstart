@@ -1,0 +1,13 @@
+{
+    "name": "Node.js Dev Container",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/sh"
+        },
+        "extensions": ["dbaeumer.vscode-eslint"]
+      }
+    }
+  }
+  
