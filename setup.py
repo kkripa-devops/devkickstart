@@ -1,16 +1,16 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='devkickstart',
     version='0.2',
-    py_modules=['devkickstart', 'utils'],
-    entry_points={
-        'console_scripts': [
-            'devkickstart=devkickstart:main',
-        ],
-    },
+    packages=find_packages(),
     include_package_data=True,
     package_data={
-        '': ['templates/**/*'],
+        'devkickstart': ['templates/**/*']
+    },
+    entry_points={
+        'console_scripts': [
+            'devkickstart=devkickstart.devkickstart:main',
+        ],
     },
 )

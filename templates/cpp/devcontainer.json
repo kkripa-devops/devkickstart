@@ -1,9 +1,0 @@
-{
-  "name": "C++ Dev Container",
-  "dockerFile": "Dockerfile",
-  "customizations": {
-    "vscode": {
-      "extensions": ["ms-vscode.cpptools"]
-    }
-  }
-}

@@ -1,6 +1,6 @@
 # DevKickstart
 
-Instantly spin up Docker-based dev environments for Node and Python apps.
+Instantly spin up Docker-based dev environments for Node, Dotnet, C/C++, CMake and Python apps.
 
 ## Usage
 1. Run `devkickstart` inside your project folder
