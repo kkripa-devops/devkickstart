@@ -21,43 +21,52 @@ DevKickstart handles that setup for you:
 - Generates ready-to-use Docker and devcontainer files
 - Lets you open in VSCode’s dev container instantly
 
-## Installation
+# Installation
 
-# bash
 pip install devkickstart
 
-# or using github repo
+# Or using github repo
 
 git clone https://github.com/kkripa-devops/devkickstart.git
+
 cd devkickstart
+
 pip install .
 
 # Usage
+
 Inside any project folder (Node, Python, .NET, etc.):
 
-# bash
+# Use bash
 devkickstart
 
-Example:
+# Example:
 
-# bash
 cd my-net-app
+
 devkickstart
 
 # You’ll now see:
 
 Welcome to DevKickstart!
+
 Detected project type: dotnet
+
 Looking for templates in: C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\devkickstart_module\templates\dotnet\windows
+
 Dev environment setup generated successfully!
 
 
 # Supported Project Types:
 
-Node.js (package.json)
-Python (requirements.txt or pyproject.toml)
-.NET (.csproj, .sln)
-C++ (.cpp, .h)
-CMake (CMakeLists.txt)
+ Node.js (package.json)
+
+ Python (requirements.txt or pyproject.toml)
+
+ .NET (.csproj, .sln)
+
+ C++ (.cpp, .h)
+
+ CMake (CMakeLists.txt)
 
 Supports both Linux and Windows environments.
