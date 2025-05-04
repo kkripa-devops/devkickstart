@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 # Copyright (c) 2025 Radhakrishnan Krishna Kripa
 # Licensed under the MIT License
-
-=======
->>>>>>> f6bee0a86908175272c6e737d111f233e2686de6
 import os
 import sys
 from .utils import detect_project_type, generate_setup
