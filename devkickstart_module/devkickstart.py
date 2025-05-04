@@ -1,6 +1,6 @@
 import os
 import sys
-from utils import detect_project_type, generate_setup
+from .utils import detect_project_type, generate_setup
 
 def main():
     print("Welcome to DevKickstart!")
