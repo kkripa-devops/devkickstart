@@ -1,12 +1,11 @@
 {
-  "name": "CMake Dev Container (Linux)",
+  "name": "Python Dev Container (Linux)",
   "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode.cpptools",
-        "twxs.cmake",
-        "vector-of-bool.cmake-tools"
+        "ms-python.python",
+        "ms-python.vscode-pylance"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"

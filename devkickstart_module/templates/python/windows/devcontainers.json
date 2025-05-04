@@ -1,12 +1,11 @@
 {
-  "name": ".NET Dev Container (Windows)",
+  "name": "Python Dev Container (Windows)",
   "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-dotnettools.csharp",
-        "ms-vscode.cpptools",
-        "twxs.cmake"
+        "ms-python.python",
+        "ms-python.vscode-pylance"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.windows": "Command Prompt"

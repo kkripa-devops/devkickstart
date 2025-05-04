@@ -1,12 +1,11 @@
 {
-  "name": "CMake Dev Container (Linux)",
+  "name": "Node.js Dev Container (Linux)",
   "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode.cpptools",
-        "twxs.cmake",
-        "vector-of-bool.cmake-tools"
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"

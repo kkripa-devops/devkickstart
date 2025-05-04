@@ -1,5 +1,6 @@
 # Copyright (c) 2025 Radhakrishnan Krishna Kripa
 # Licensed under the MIT License
+
 import os
 import shutil
 from pathlib import Path
@@ -28,8 +29,7 @@ def detect_project_type(path):
     else:
         return None
 
-def generate_setup(project_type, dest_path):
-    os_type = get_host_os()
+def generate_setup(project_type, dest_path, os_type, dry_run=False):
     base_dir = Path(__file__).resolve().parent
     template_path = base_dir / "templates" / project_type / os_type
 
@@ -40,4 +40,9 @@ def generate_setup(project_type, dest_path):
 
     for file in template_path.iterdir():
         if file.is_file():
-            shutil.copy(file, dest_path)
+            if dry_run:
+                print(f"Would copy: {file.name} → {dest_path}")
+            else:
+                shutil.copy(file, dest_path)
+                print(f"Copied: {file.name}")
+
