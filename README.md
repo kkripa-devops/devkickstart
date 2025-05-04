@@ -48,7 +48,7 @@ devkickstart
 
 devkickstart --stack dotnet --os linux
 
-# Force node + Linux
+# Force node + Windows
 
 devkickstart --stack dotnet --os windows
 
