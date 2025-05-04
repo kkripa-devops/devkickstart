@@ -39,8 +39,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-=======
->>>>>>> f6bee0a86908175272c6e737d111f233e2686de6
 
 .vscode/
 .idea/
