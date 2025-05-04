@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Radhakrishnan Krishna Kripa
+# Licensed under the MIT License
+
 import os
 import sys
 from .utils import detect_project_type, generate_setup

@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Radhakrishnan Krishna Kripa
+# Licensed under the MIT License
+
 from setuptools import setup, find_packages
 
 setup(
