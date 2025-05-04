@@ -6,11 +6,14 @@ SHELL ["powershell", "-Command"]
 RUN Set-ExecutionPolicy Bypass -Scope Process -Force ; \
     iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-# Install required tools
-RUN choco install -y cmake git python 7zip dotnet nuget.commandline
-
-# Add Python to PATH
-RUN setx PATH "$env:PATH;C:\Python311\;C:\Python311\Scripts"
+# Install essential tools
+RUN choco install -y; \
+    git ; \
+    nodejs ; \
+    cmake ; \
+    python ; \
+    7zip ; \
+    yarn
 
 WORKDIR C:/app
 COPY . .

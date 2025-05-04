@@ -3,7 +3,14 @@
   "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
-      "extensions": ["ms-dotnettools.csharp"]
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-vscode.cpptools",
+        "twxs.cmake"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
     }
   }
 }

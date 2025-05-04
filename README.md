@@ -33,12 +33,28 @@ cd devkickstart
 
 pip install .
 
+# Uninstall
+
+pip uninstall devkickstart -y
+
 # Usage
 
 Inside any project folder (Node, Python, .NET, etc.):
 
-# Use bash
+# Auto-detect
 devkickstart
+
+# Force node + Linux
+
+devkickstart --stack dotnet --os linux
+
+# Force node + Linux
+
+devkickstart --stack dotnet --os windows
+
+# Dry run to preview without writing files
+
+devkickstart --dry-run
 
 # Example:
 
