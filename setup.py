@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 # Copyright (c) 2025 Radhakrishnan Krishna Kripa
 # Licensed under the MIT License
 
-=======
->>>>>>> f6bee0a86908175272c6e737d111f233e2686de6
 from setuptools import setup, find_packages
 
 setup(
