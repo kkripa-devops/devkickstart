@@ -1,0 +1,13 @@
+{
+  "name": "CMake Linux Dev Container",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "twxs.cmake",
+        "vector-of-bool.cmake-tools"
+      ]
+    }
+  }
+}

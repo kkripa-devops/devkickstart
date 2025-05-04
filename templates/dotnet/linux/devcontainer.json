@@ -1,0 +1,9 @@
+{
+  "name": ".NET Dev Container (Linux)",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-dotnettools.csharp"]
+    }
+  }
+}

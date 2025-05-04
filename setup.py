@@ -1,16 +1,16 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='devkickstart',
-    version='0.1',
+    version='0.2',
     py_modules=['devkickstart', 'utils'],
-    package_data={
-        '': ['templates/*/*'],  # include all files in templates/**/*
-    },
-    include_package_data=True,
     entry_points={
         'console_scripts': [
             'devkickstart=devkickstart:main',
         ],
+    },
+    include_package_data=True,
+    package_data={
+        '': ['templates/**/*'],
     },
 )

@@ -1,5 +1,15 @@
 import os
 import shutil
+from pathlib import Path
+import platform
+
+def get_host_os():
+    os_name = platform.system().lower()
+    if "windows" in os_name:
+        return "windows"
+    elif "linux" in os_name or "darwin" in os_name:
+        return "linux"
+    return "unknown"
 
 def detect_project_type(path):
     files = os.listdir(path)
@@ -7,17 +17,25 @@ def detect_project_type(path):
         return "node"
     elif "requirements.txt" in files or "pyproject.toml" in files:
         return "python"
+    elif any(f.endswith(".csproj") or f.endswith(".sln") for f in files):
+        return "dotnet"
+    elif any(f.endswith(".cpp") or f.endswith(".h") for f in files):
+        return "cpp"
+    elif "CMakeLists.txt" in files:
+        return "cmake"
     else:
         return None
 
 def generate_setup(project_type, dest_path):
-    base_dir = os.path.dirname(os.path.abspath(__file__))  # where devkickstart lives
-    template_path = os.path.join(base_dir, "templates", project_type)
+    os_type = get_host_os()
 
-    if not os.path.exists(template_path):
-        print(f"❌ Template path not found: {template_path}")
+    base_dir = Path(__file__).resolve().parent
+    template_path = base_dir / "templates" / project_type / os_type
+
+    if not template_path.exists():
+        print(f"No templates found for '{project_type}' on '{os_type}'.")
         return
 
-    for filename in os.listdir(template_path):
-        full_file = os.path.join(template_path, filename)
-        shutil.copy(full_file, dest_path)
+    for file in template_path.iterdir():
+        if file.is_file():
+            shutil.copy(file, dest_path)
