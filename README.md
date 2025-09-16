@@ -23,10 +23,6 @@ DevKickstart handles that setup for you:
 
 # Installation
 
-pip install devkickstart
-
-# Or using github repo
-
 git clone https://github.com/kkripa-devops/devkickstart.git
 
 cd devkickstart

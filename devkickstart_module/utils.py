@@ -38,11 +38,26 @@ def generate_setup(project_type, dest_path, os_type, dry_run=False):
         print(f"No templates found for '{project_type}' on '{os_type}'.")
         return
 
+    # Always write into a .devcontainer folder at the project root
+    dest_root = Path(dest_path)
+    target_dir = dest_root / ".devcontainer"
+    if dry_run:
+        print(f"Would create: {target_dir}")
+    else:
+        target_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Writing to: {target_dir}")
+
     for file in template_path.iterdir():
         if file.is_file():
+            dst = target_dir / file.name
             if dry_run:
-                print(f"Would copy: {file.name} → {dest_path}")
+                print(f"Would copy: {file.name} → {dst}")
             else:
-                shutil.copy(file, dest_path)
-                print(f"Copied: {file.name}")
-
+                # copy2 preserves mtime where available
+                shutil.copy2(file, dst)
+                # Log path relative to project root so it reads as ".devcontainer/…"
+                try:
+                    rel = dst.relative_to(dest_root)
+                except ValueError:
+                    rel = dst
+                print(f"Copied: {rel}")
